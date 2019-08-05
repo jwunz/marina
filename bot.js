@@ -12,7 +12,9 @@ var xml = require('xml-parse');
 
 var helpMessage = '\
 **!help:** Returns a list of commands.\n\
-**!ping:** Returns "Pong!" in the current channel.\n\
+**!ping:** Returns "Pong!"\n\
+**!goodnight:** Returns "Sweet Dreams!"\n\
+**!your_turn:** Returns one of two messages randomly.\n\
 ';
 
 // Configure logger settings
