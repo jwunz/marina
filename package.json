@@ -1,0 +1,13 @@
+{
+  "name": "marina-bot",
+  "version": "0.0.1",
+  "description": "A bot for my unofficial Valkyria Chronicles Discord server.",
+  "main": "bot.js",
+  "author": "Wunz and Zeroes Web Development",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "winston": "^3.0.0",
+    "xml-parse": "^0.3.1",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
