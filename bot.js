@@ -10,7 +10,7 @@ var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 var request = new XMLHttpRequest();
 var xml = require('xml-parse');
 
-var helpMessage = '\
+var helpMessage = '>>> \
 **!help:** Returns a list of commands.\n\
 **!ping:** Returns "Pong!"\n\
 **!goodnight:** Returns "Sweet Dreams!"\n\
@@ -45,7 +45,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             // !help
             case 'help':
                 bot.sendMessage({
-                    to: userID,
+                    to: channelID,
                     message: helpMessage
                 });
             break;
@@ -80,11 +80,16 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             break;  
             case 'goodnight':
-            bot.sendMessage({
-                to: channelID,
-                message: 'Sweet Dreams!'
-            });
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Sweet Dreams!'
+                });
             break;
+            default:
+                bot.sendMessage({
+                    to: channelID,
+                    message: `> **${cmd}** is not a valid command, type **!help** for help.`
+                })
          }
      }
 });
